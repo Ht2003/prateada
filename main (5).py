@@ -1,3 +1,4 @@
+#Q1 fazer um programa que saia em ordem crescente ou não 
 lista=[] # duas listas para comparar 
 L2=[]
 N=int(input("N="))#N valores
