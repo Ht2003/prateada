@@ -1,0 +1,27 @@
+import random
+print('-'*30)
+print('Jogo de dados:  --->')
+print('-'*30)
+tentativas=3
+Dado1=random.randint(1,6)
+Dado2=random.randint(1,6)
+Dado3=random.randint(1,6)
+while tentativas > 0:
+   jogador=int(input('escolha um  numero de de 1 a 6 :'))
+   tentativas -= 1
+   if jogador != Dado1 and jogador != Dado2 and Dado3 != jogador:
+       print('o jogador nao acertou nenhum')
+   elif jogador == Dado1 and jogador != Dado2 and jogador  != Dado3:
+       print('o jogador acertou uma vez')
+   elif jogador != Dado1 and jogador == Dado2 and jogador != Dado3:
+       print('o jogador acertou uma vez')
+   elif jogador != Dado1 and jogador != Dado2 and jogador == Dado3:
+       print('o jogador acertou uma vez')
+   elif jogador == Dado1 and jogador == Dado2 and jogador  != Dado3:
+       print('o jogador acertou duas vezes')
+   elif jogador != Dado1 and jogador == Dado2 and jogador == Dado3:
+       print('o jogador acertou duas vezes')
+   elif jogador == Dado1 and jogador != Dado2 and jogador == Dado3:
+       print('o jogador acertou duas vezes')
+   elif jogador == Dado1 and jogador == Dado2 and jogador == Dado3:
+       print('o jogador acertou tres vezes! sensacional')
