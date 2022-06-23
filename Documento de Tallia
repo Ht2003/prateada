@@ -1,0 +1,27 @@
+import random
+print('-'*30)
+print('jogo pedra, papel, tesoura')
+print('-' *30)
+print('escolha uma das opções para jogar\n-->')
+tentativas=3
+while tentativas:
+    tentativas -=1
+    computador=random.randint(1,3)
+    nms= ['', 'pedra', 'papel', 'tesoura']
+    usuario = int(input('pedra:1\npapel:2\ntesoura:3\n'))
+    if usuario == computador:
+      print(f'o computador escolheu {nms[computador]} e o usuario {nms[usuario]}.\n empate')
+    elif usuario > 3:
+        print('numero digitado invalido! Digite novamente ---->')
+    elif usuario == 1 and computador == 2:
+      print(f'o usuario escolheu {nms[usuario]} e o computador escolheu {nms[computador]}. \no computador ganhou')
+    elif usuario == 2 and computador == 1:
+      print(f'o usuario escolheu {nms[usuario]} e o computador escolheu {nms[computador]}.\n o usuario ganhou')
+    elif usuario == 1 and computador == 3:
+      print(f'o usuario escolheu {nms[usuario]} e o computador escolheu {nms[computador]}.\n o usuario ganhou')
+    elif usuario == 3 and computador == 1:
+      print(f'o usuario escolheu {nms[usuario]} e o computador escolheu {nms[computador]}.\n o computador ganhou')
+    elif usuario == 3 and computador == 2:
+      print(f'o usuario escolheu {nms[usuario]} e o computador escolheu {nms[computador]}.\n o usuario ganhou')
+    elif usuario == 2 and computador == 3:
+      print(f'o usuario escolheu {nms[usuario]} e o computador escolheu {nms[computador]}.\n o computador ganhou ')
